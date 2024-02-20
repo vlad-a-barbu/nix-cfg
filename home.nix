@@ -1,6 +1,15 @@
 { config, pkgs, ... }:
-
+let
+  nixvim = import (builtins.fetchGit {
+    url = "https://github.com/nix-community/nixvim";
+    ref = "nixos-23.11";
+  });
+in
 {
+  imports = [
+    nixvim.homeManagerModules.nixvim
+  ];
+
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "vb";
@@ -79,6 +88,27 @@
     enable = true;
     settings = {
       git_protocol = "ssh";
+    };
+  };
+
+  programs.nixvim = {
+    enable = true;
+    options = {
+      number = true;
+      relativenumber = true;
+      shiftwidth = 2;
+      expandtab = true;
+    };
+    extraPlugins = with pkgs.vimPlugins; [
+      vim-nix
+    ];
+  };
+
+  programs.bash = {
+    enable = true;
+    shellAliases = {
+	vi = "nvim";
+	vim = "nvim";
     };
   };
 }
