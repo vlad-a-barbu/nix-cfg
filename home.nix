@@ -75,5 +75,10 @@
     userEmail = "vlad.a.brb@gmail.com";
   };
 
-  programs.gh.enable = true
+  programs.gh = {
+    enable = true;
+    settings = {
+      git_protocol = "ssh";
+    };
+  };
 }
