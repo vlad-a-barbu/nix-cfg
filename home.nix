@@ -103,6 +103,9 @@ in
       showmatch = true;
     };
     plugins = {
+      nvim-cmp = {
+        enable = true;
+      };
       lsp = {
         enable = true;
         servers = {
