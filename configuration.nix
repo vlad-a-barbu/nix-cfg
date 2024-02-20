@@ -88,6 +88,7 @@
       firefox
       xclip
       gh
+      dotnet-sdk_8
     ];
   };
 

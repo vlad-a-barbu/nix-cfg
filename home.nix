@@ -96,8 +96,30 @@ in
     options = {
       number = true;
       relativenumber = true;
-      shiftwidth = 2;
+      shiftwidth = 4;
+      tabstop = 4;
       expandtab = true;
+      autoindent = true;
+      showmatch = true;
+    };
+    plugins = {
+      lsp = {
+        enable = true;
+        servers = {
+          omnisharp = {
+            enable = true;
+            settings = {
+              enableEditorConfigSupport = true;
+              enableMsBuildLoadProjectsOnDemand = false;
+              enableRoslynAnalyzers = false;
+              organizeImportsOnFormat = false;
+              enableImportCompletion = true;
+              sdkIncludePrereleases = true;
+              analyzeOpenDocumentsOnly = true;
+            };
+          };
+        };
+      };
     };
     extraPlugins = with pkgs.vimPlugins; [
       vim-nix
