@@ -1,0 +1,5 @@
+#! /usr/bin/env nix-shell
+#! nix-shell -i bash -p bash
+
+cp ./home.nix $HOME/.config/home-manager/home.nix
+sudo cp ./configuration.nix /etc/nixos/configuration.nix

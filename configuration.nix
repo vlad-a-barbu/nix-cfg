@@ -90,6 +90,8 @@
     ];
   };
 
+  nix.settings.allowed-users = [ "vb" ];
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
