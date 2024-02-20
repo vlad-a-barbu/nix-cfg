@@ -3,3 +3,6 @@
 
 cp ./home.nix $HOME/.config/home-manager/home.nix
 sudo cp ./configuration.nix /etc/nixos/configuration.nix
+
+home-manager switch
+sudo nixos-rebuild switch
