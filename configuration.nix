@@ -86,7 +86,8 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       firefox
-    #  thunderbird
+      xclip
+      gh
     ];
   };
 
@@ -102,7 +103,6 @@
 	tmux
 	wget
 	git
-	gh
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

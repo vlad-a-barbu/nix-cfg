@@ -102,6 +102,7 @@ in
     extraPlugins = with pkgs.vimPlugins; [
       vim-nix
     ];
+    clipboard.providers.xclip.enable = true;
   };
 
   programs.bash = {
