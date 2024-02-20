@@ -48,6 +48,7 @@
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
+  services.xserver.xkbOptions = "ctrl:nocaps";
 
   # Configure keymap in X11
   services.xserver = {
@@ -96,9 +97,10 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
 	vim
+	tmux
+	wget
 	git
 	gh
-	wget
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -128,4 +130,5 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.11"; # Did you read the comment?
 
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 }
