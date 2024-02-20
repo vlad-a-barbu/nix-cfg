@@ -6,3 +6,8 @@ sudo cp ./configuration.nix /etc/nixos/configuration.nix
 
 home-manager switch
 sudo nixos-rebuild switch
+
+# otherwise the swap-ctrl-caps cfg does not work
+gsettings reset org.gnome.desktop.input-sources xkb-options
+gsettings reset org.gnome.desktop.input-sources sources
+
