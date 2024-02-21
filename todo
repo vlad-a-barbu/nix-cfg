@@ -2,4 +2,8 @@
 2. gnome-tweaks cfgs
 3. power options
 
-nix lang ref - https://nix.dev/tutorials/nix-language.html
+refs 
+- https://nix.dev/tutorials/nix-language.html
+- https://nixos.org/guides/nix-pills/
+- https://search.nixos.org/options?channel=23.11&show=virtualisation.docker.enableNvidia&size=50&sort=relevance&type=packages&query=docker
+- https://search.nixos.org/packages?channel=23.11&size=50&sort=relevance&type=packages&query=docker
