@@ -93,6 +93,7 @@ in
 
   programs.nixvim = {
     enable = true;
+    defaultEditor = true;
     options = {
       number = true;
       relativenumber = true;
@@ -109,6 +110,9 @@ in
       lsp = {
         enable = true;
         servers = {
+          nixd = {
+            enable = true;
+          };
           omnisharp = {
             enable = true;
             settings = {
