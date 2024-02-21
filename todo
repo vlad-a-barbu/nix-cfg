@@ -1,6 +1,7 @@
 1. home manager standalone installation process
 2. gnome-tweaks cfgs
 3. power options
+4. nixvim autocomplete ? (https://github1s.com/nix-community/nixvim/blob/main/plugins/completion/nvim-cmp/default.nix)
 
 refs 
 - https://nix.dev/tutorials/nix-language.html
